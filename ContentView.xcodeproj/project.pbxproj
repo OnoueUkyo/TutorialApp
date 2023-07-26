@@ -14,6 +14,9 @@
 		B931D7BA2A6F9DA7001A11FD /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B931D7B92A6F9DA7001A11FD /* ContentViewTests.swift */; };
 		B931D7C42A6F9DA7001A11FD /* ContentViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B931D7C32A6F9DA7001A11FD /* ContentViewUITests.swift */; };
 		B931D7C62A6F9DA7001A11FD /* ContentViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B931D7C52A6F9DA7001A11FD /* ContentViewUITestsLaunchTests.swift */; };
+		B940280A2A70EF0B0052AEB0 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94028092A70EF0B0052AEB0 /* FirstView.swift */; };
+		B940280D2A70EF3C0052AEB0 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940280C2A70EF3C0052AEB0 /* SecondView.swift */; };
+		B940280F2A70EF4F0052AEB0 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B940280E2A70EF4F0052AEB0 /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		B931D7BF2A6F9DA7001A11FD /* ContentViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B931D7C32A6F9DA7001A11FD /* ContentViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewUITests.swift; sourceTree = "<group>"; };
 		B931D7C52A6F9DA7001A11FD /* ContentViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B94028092A70EF0B0052AEB0 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		B940280C2A70EF3C0052AEB0 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		B940280E2A70EF4F0052AEB0 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				B931D7AB2A6F9DA7001A11FD /* Assets.xcassets */,
 				B931D7AD2A6F9DA7001A11FD /* ContentView.entitlements */,
 				B931D7AE2A6F9DA7001A11FD /* Preview Content */,
+				B94028092A70EF0B0052AEB0 /* FirstView.swift */,
+				B940280C2A70EF3C0052AEB0 /* SecondView.swift */,
+				B940280E2A70EF4F0052AEB0 /* ThirdView.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -260,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B931D7AA2A6F9DA5001A11FD /* ContentView.swift in Sources */,
+				B940280F2A70EF4F0052AEB0 /* ThirdView.swift in Sources */,
+				B940280A2A70EF0B0052AEB0 /* FirstView.swift in Sources */,
+				B940280D2A70EF3C0052AEB0 /* SecondView.swift in Sources */,
 				B931D7A82A6F9DA5001A11FD /* ContentViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,7 +441,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -437,10 +449,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tutorialApp.ContentView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -467,7 +481,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -475,10 +489,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tutorialApp.ContentView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
