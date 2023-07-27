@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct FirstView: View {
+    @State var bool = true
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         NavigationView{
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 VStack {
                     ScrollView(.horizontal,showsIndicators:false){
                         HStack{
                             ForEach(0..<8){num in
                                 Circle()
+                                    .onTapGesture {
+                                        bool.toggle()
+                                    }
                                     .frame(height:100)
                                     .foregroundColor(.white)
                                     .overlay{
                                         Circle()
-                                            .stroke(LinearGradient(gradient: Gradient(colors: [.yellow, .red, .purple]), startPoint: .bottomLeading, endPoint: .topTrailing), lineWidth: 5)
+                                            .stroke(bool ? LinearGradient(gradient: Gradient(colors: [.yellow, .red, .purple]), startPoint: .bottomLeading, endPoint: .topTrailing) : LinearGradient(gradient: Gradient(colors: [.gray, .gray]), startPoint: .bottomLeading, endPoint: .topTrailing),lineWidth:3)
                                     }.frame(height:105)
                                     .padding(.horizontal,7)
-                                
                             }
                             Spacer()
                         }.padding(.top,20)
