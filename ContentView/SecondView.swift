@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SecondView: View {
     @State var searchText:String=""
-    let acount=[
+    let accountList=[
         "Onoue",
         "Ukyo",
         "murakami",
@@ -17,8 +17,15 @@ struct SecondView: View {
         "saeki",
         "masaya",
         "nakamura",
-        "sinnitirou"
+        "sinnitirou",
+        "KDS"
     ]
+    
+    private var ac: [String]{
+        let searchResult = accountList.filter { $0.localizedStandardContains(searchText) }
+        return searchText.isEmpty ? accountList : searchResult
+    }
+    
     var body: some View {
         NavigationView{
             ScrollView(showsIndicators: false){
@@ -31,11 +38,23 @@ struct SecondView: View {
                     ForEach(0..<ac.count,id:\.self){ index in
                         NavigationLink(destination:ThirdView()){
                             HStack{
-                                Circle()
-                                    .frame(height:40)
-                                    .foregroundColor(.white)
-                                    .overlay(
-                                        Circle().stroke())
+                                if (index==ac.count-1){
+                                    Image("kyu")
+                                        .resizable()
+                                        .clipShape(Circle())
+                                        .overlay(
+                                            Circle().stroke(Color.clear))
+                                        .frame(
+                                            width: 50, height: 50,
+                                            alignment: .leading
+                                        )
+                                }else{
+                                    Circle()
+                                        .frame(height:40)
+                                        .foregroundColor(.white)
+                                        .overlay(
+                                            Circle().stroke())
+                                }
                                 Text(ac[index])
                                 Spacer()
                             }.foregroundColor(.primary)
@@ -55,10 +74,7 @@ struct SecondView: View {
     }
     
     
-    private var ac: [String]{
-        let searchResult = acount.filter { $0.localizedStandardContains(searchText) }
-        return searchText.isEmpty ? acount : searchResult
-    }
+    
     
 }
 struct SecondView_Previews: PreviewProvider {
