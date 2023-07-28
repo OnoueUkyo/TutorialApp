@@ -38,7 +38,7 @@ struct SecondView: View {
                     ForEach(0..<ac.count,id:\.self){ index in
                         NavigationLink(destination:ThirdView()){
                             HStack{
-                                if (index==ac.count-1){
+                                if ac[index]=="KDS"{
                                     Image("kyu")
                                         .resizable()
                                         .clipShape(Circle())
@@ -64,12 +64,10 @@ struct SecondView: View {
                             
                         }
                         
-                    }.searchable( text: $searchText)
+                    }
                     Spacer()
                 }
-//                .searchable(text:$searchText)
-            }
-            
+            }.searchable(text: $searchText)
         }
     }
     

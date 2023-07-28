@@ -53,7 +53,7 @@
 		B94028092A70EF0B0052AEB0 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		B940280C2A70EF3C0052AEB0 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		B940280E2A70EF4F0052AEB0 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
-		B99733AC2A7208A400830566 /* kyu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kyu.png; path = ../../../Downloads/kyu.png; sourceTree = "<group>"; };
+		B99733AC2A7208A400830566 /* kyu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kyu.png; path = ../../kyu.png; sourceTree = "<group>"; };
 		B99733B02A720D5500830566 /* FirstChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChildView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
