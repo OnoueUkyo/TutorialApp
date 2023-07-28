@@ -10,23 +10,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            FirstView().tabItem {
+            HomeView().tabItem {
                 Text("Home")
                 Image(systemName: "house")
             }
-            SecondView().tabItem {
+            SearchView().tabItem {
                 Text("Search")
                 Image(systemName: "magnifyingglass")
             }
-            ThirdView().tabItem {
+            NoticeView().tabItem {
                 Text("Add")
                 Image(systemName: "plus.app")
             }
-            ThirdView().tabItem {
+            NoticeView().tabItem {
                 Text("Reel")
                 Image(systemName: "play.tv.fill")
             }
-            ThirdView().tabItem {
+            NoticeView().tabItem {
                 Text("Profile")
                 Image(systemName: "circle.fill")
             }

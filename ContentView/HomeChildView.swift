@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FirstChildView: View {
+struct HomeChildView: View {
     @State var inputText=""
     @State var like = false
     var body: some View {
@@ -56,7 +56,10 @@ struct FirstChildView: View {
                 }.font(.system(size:20))
                     .padding(.leading,8)
                 HStack{
-                    TextField("コメントを入力",text: $inputText)
+                    TextField(
+                        "コメントを入力",
+                        text: $inputText
+                    )
                 }.frame(height:70)
                 
                 HStack{
@@ -71,6 +74,6 @@ struct FirstChildView: View {
 
 struct FirstChildView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstChildView()
+        HomeChildView()
     }
 }

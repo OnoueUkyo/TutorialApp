@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct ThirdView: View {
+struct NoticeView: View {
     @Environment(\.dismiss) private var dismiss
-    @State var buttonText = "フォロー"
-    @State var bool = false
+    
     var body: some View {
         NavigationView{
             ScrollView{
                 VStack{
-                    NavigationLink(destination:ContentView()){
+                    NavigationLink(destination:FollowRequestView()){
                         HStack{
                             Circle()
                                 .frame(height:40)
@@ -83,31 +82,8 @@ struct ThirdView: View {
                             
                             
                         }.padding(.top,60)
-                        Button(
-                            action: {
-                                bool.toggle()
-                                buttonText=bool ? "フォロー中" : "フォロー"
-                            }, label: {
-                                Text(buttonText)
-                                    .bold()
-                                    .frame(
-                                        width: 100,
-                                        height: 35
-                                    )
-                                    .foregroundColor(
-                                        bool ? .black : .white
-                                    )
-                                    .background(
-                                        bool ? .gray .opacity(0.2): .blue
-                                    )
-                                    .cornerRadius(10)
-                            }).padding(EdgeInsets(
-                                top: 60,
-                                leading: 0,
-                                bottom: 0,
-                                trailing: 5
-                            ))
-                        
+                        ButtonFun()
+                            .padding(.trailing,15)
                         Spacer()
                     }.frame(height:70)
                         .padding(.leading,15)
@@ -137,6 +113,6 @@ struct ThirdView: View {
 
 struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        ThirdView()
+        NoticeView()
     }
 }

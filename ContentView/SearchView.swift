@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct SecondView: View {
+struct SearchView: View {
     @State var searchText:String=""
+    
     let accountList=[
         "Onoue",
         "Ukyo",
@@ -35,8 +36,11 @@ struct SecondView: View {
                             .padding(.leading,20)
                         Spacer()
                     }
-                    ForEach(0..<ac.count,id:\.self){ index in
-                        NavigationLink(destination:ThirdView()){
+                    ForEach(
+                        0..<ac.count,
+                        id:\.self
+                    ){ index in
+                        NavigationLink(destination:NoticeView()){
                             HStack{
                                 if ac[index]=="KDS"{
                                     Image("kyu")
@@ -77,6 +81,6 @@ struct SecondView: View {
 }
 struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondView()
+        SearchView()
     }
 }

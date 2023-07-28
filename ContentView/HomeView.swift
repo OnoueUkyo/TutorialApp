@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FirstView: View {
+struct HomeView: View {
     @Environment(\.dismiss) private var dismiss
     @State var bool = true
     
@@ -38,7 +38,10 @@ struct FirstView: View {
                                             .stroke(
                                                 bool ? LinearGradient(
                                                     gradient: Gradient(
-                                                        colors: [.yellow,.red,.purple]
+                                                        colors: [
+                                                            .yellow,
+                                                            .red,.purple
+                                                        ]
                                                     ),
                                                     startPoint:.bottomLeading,
                                                     endPoint: .topTrailing
@@ -57,14 +60,17 @@ struct FirstView: View {
                             Spacer()
                         }.padding(.top,20)
                     }
-                    FirstChildView()
+                    HomeChildView()
                 }
                 .navigationBarItems(
                     leading:Text("Instaglam")
                         .foregroundColor(.black)
-                        .font(.custom("HoeflerText-Italic", size: 35)),
+                        .font(.custom(
+                            "HoeflerText-Italic",
+                            size: 35
+                        )),
                     trailing : HStack{
-                        NavigationLink(destination:ThirdView()){
+                        NavigationLink(destination:NoticeView()){
                             Image(systemName:"heart")
                                 .foregroundColor(.primary)
                         }
@@ -82,6 +88,6 @@ struct FirstView: View {
 
 struct FirstView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstView()
+        HomeView()
     }
 }
