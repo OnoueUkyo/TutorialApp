@@ -21,6 +21,7 @@
 		B99733B12A720D5500830566 /* HomeChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99733B02A720D5500830566 /* HomeChildView.swift */; };
 		B9CA23D52A73668E00948F5F /* FollowRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA23D42A73668E00948F5F /* FollowRequestView.swift */; };
 		B9CA23D82A736A9C00948F5F /* ButtonFun.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA23D72A736A9C00948F5F /* ButtonFun.swift */; };
+		B9CA23DA2A73ADB400948F5F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA23D92A73ADB400948F5F /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B99733B02A720D5500830566 /* HomeChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChildView.swift; sourceTree = "<group>"; };
 		B9CA23D42A73668E00948F5F /* FollowRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowRequestView.swift; sourceTree = "<group>"; };
 		B9CA23D72A736A9C00948F5F /* ButtonFun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFun.swift; sourceTree = "<group>"; };
+		B9CA23D92A73ADB400948F5F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				B940280E2A70EF4F0052AEB0 /* NoticeView.swift */,
 				B99733B02A720D5500830566 /* HomeChildView.swift */,
 				B9CA23D42A73668E00948F5F /* FollowRequestView.swift */,
+				B9CA23D92A73ADB400948F5F /* ProfileView.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99733B12A720D5500830566 /* HomeChildView.swift in Sources */,
+				B9CA23DA2A73ADB400948F5F /* ProfileView.swift in Sources */,
 				B9CA23D82A736A9C00948F5F /* ButtonFun.swift in Sources */,
 				B931D7AA2A6F9DA5001A11FD /* ContentView.swift in Sources */,
 				B940280F2A70EF4F0052AEB0 /* NoticeView.swift in Sources */,

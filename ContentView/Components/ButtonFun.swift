@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ButtonFun: View {
+    //buttonText　＝　フォロー、フォロワー、確認、削除
     @State var buttonText = "フォロー"
     @State var bool = false
     @State var buttonBool = false
@@ -34,12 +35,7 @@ struct ButtonFun: View {
                     )
                     .cornerRadius(10)
             })
-        .padding(EdgeInsets(
-                top: 60,
-                leading: 0,
-                bottom: 0,
-                trailing: 5
-            ))
+        
         
         
     }
