@@ -72,11 +72,13 @@ struct HomeView: View {
                     trailing : HStack{
                         NavigationLink(destination:NoticeView()){
                             Image(systemName:"heart")
-                                .foregroundColor(.primary)
+                                
                         }
-                        Image(systemName:"bolt.horizontal.circle")
-                            .font(.system(size:20))
-                    }
+                        NavigationLink(destination:MessageView()){
+                            Image(systemName:"bolt.horizontal.circle")
+                                .font(.system(size:20))
+                        }
+                    }.foregroundColor(.primary)
                 )
                 
             }

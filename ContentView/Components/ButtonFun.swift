@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ButtonFun: View {
+    //buttonText　＝　フォロー、フォロワー、確認、削除,プロフィールを編集,プロフィールをシェア
     @State var buttonText = "フォロー"
     @State var bool = false
     @State var buttonBool = false
+    @State var buttonWidth :CGFloat = 70
+    @State var buttonHeight :CGFloat = 35
     var body: some View {
         Button(
             action: {
-                if buttonText != "確認" && buttonText != "削除"{
+                if buttonText == "フォロー" || buttonText == "フォロー中"{
                     bool.toggle()
                     buttonText=bool ? "フォロー中" : "フォロー"
                 }
@@ -23,8 +26,8 @@ struct ButtonFun: View {
                 Text(buttonText).font(.system(size: 10))
                     .bold()
                     .frame(
-                        width: 70,
-                        height: 35
+                        width: buttonWidth,
+                        height: buttonHeight
                     )
                     .foregroundColor(
                         bool ? .black : .white
@@ -34,14 +37,6 @@ struct ButtonFun: View {
                     )
                     .cornerRadius(10)
             })
-        .padding(EdgeInsets(
-                top: 60,
-                leading: 0,
-                bottom: 0,
-                trailing: 5
-            ))
-        
-        
     }
 }
 

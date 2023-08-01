@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showingPicker = true
     var body: some View {
         TabView {
             HomeView().tabItem {
@@ -18,7 +19,7 @@ struct ContentView: View {
                 Text("Search")
                 Image(systemName: "magnifyingglass")
             }
-            NoticeView().tabItem {
+            PostView(showingPicker: true).tabItem {
                 Text("Add")
                 Image(systemName: "plus.app")
             }
@@ -26,11 +27,11 @@ struct ContentView: View {
                 Text("Reel")
                 Image(systemName: "play.tv.fill")
             }
-            NoticeView().tabItem {
+            ProfileView().tabItem {
                 Text("Profile")
                 Image(systemName: "circle.fill")
             }
-        }
+        }.accentColor(.black)
     }
 }
 

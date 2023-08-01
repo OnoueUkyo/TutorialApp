@@ -54,7 +54,7 @@ struct FollowRequestView: View {
                                 Spacer()
                                 ButtonFun(buttonText:"確認")
                                     .padding(EdgeInsets(
-                                        top: 0,
+                                        top: 60,
                                         leading: 0,
                                         bottom: 60,
                                         trailing: 0
@@ -66,7 +66,7 @@ struct FollowRequestView: View {
                                     
                                 ButtonFun(buttonText:"削除",bool: true)
                                     .padding(EdgeInsets(
-                                        top: 0,
+                                        top: 60,
                                         leading: 0,
                                         bottom: 60,
                                         trailing: 20

@@ -39,7 +39,7 @@ struct NoticeView: View {
                             
                             Image(systemName: "chevron.right")
                                 .padding(.trailing,10)
-                                
+                            
                         }.foregroundColor(.primary)
                         Spacer()
                     }
@@ -53,41 +53,32 @@ struct NoticeView: View {
                     //.background(.red)
                     Divider()
                     HStack{
-                        VStack{
-                            Text("今日")
-                                .padding(EdgeInsets(
-                                    top: 15,
-                                    leading: 0,
-                                    bottom: 20,
-                                    trailing: 0
-                                ))
-                            Circle()
-                                .frame(height:40)
-                                .foregroundColor(.white)
-                                .overlay(
-                                    Circle().stroke())
-                        }
-                        VStack{
-                            Text("Onoueがあなたをフォロ")
-                                .frame(
-                                    maxWidth:.infinity,
-                                    alignment: .leading
-                                )
-                            Text("ーしました。")
-                                .frame(
-                                    maxWidth:.infinity,
-                                    alignment: .leading
-                                )
-                                .padding(.leading,3)
-                            
-                            
-                        }.padding(.top,60)
+                        Text("今日")
+                            .padding(EdgeInsets(
+                                top: 15,
+                                leading: 20,
+                                bottom: 10,
+                                trailing: 0
+                            ))
+                        Spacer()
+                    }
+                    HStack{
+                        Circle()
+                            .frame(height:40)
+                            .foregroundColor(.white)
+                            .overlay(
+                                Circle().stroke())
+                        Text("Onoueがあなたをフォローしました。")
+                            .frame(
+                                maxWidth:.infinity,
+                                alignment: .leading
+                            )
+                        
                         ButtonFun()
                             .padding(.trailing,15)
-                        Spacer()
-                    }.frame(height:70)
-                        .padding(.leading,15)
-                    Divider().padding(.top,20)
+                    }.padding(.leading,15)
+                    Divider()
+                    
                     //.background(.red)
                     Spacer()
                 }
